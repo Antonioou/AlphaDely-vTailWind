@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="css/output.css">
+        <link href="../vendor/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- component -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+            <div x-data="{ open: false }"
+                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                <div class="p-4 flex flex-row items-center justify-between">
+                    <a href="#"
+                        class="text-lg font-sans tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">AlphaDely</a>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- bg-gray-200 -->
+                <nav :class="{'flex': open, 'hidden': !open}"
+                    class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+
+                    <!-- search bar -->
+                    <div class=" sm:block flex-shrink flex-grow-0 justify-start px-2">
+                        <div class="inline-block">
+                            <div class="inline-flex items-center max-w-full">
+                                <button
+                                    class="flex items-center flex-grow-0 flex-shrink pl-2 relative w-60 border rounded-full px-1 "
+                                    type="button">
+                                    <div class="block flex-grow flex-shrink overflow-hidden">Buscar</div>
+                                    <div class="flex items-center justify-center relative  h-8 w-8 rounded-full">
+                                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                            role="presentation" focusable="false" style="
+                                                    display: block;
+                                                    fill: none;
+                                                    height: 12px;
+                                                    width: 12px;
+                                                    stroke: currentcolor;
+                                                    stroke-width: 5.33333;
+                                                    overflow: visible;
+                                                ">
+                                            <g fill="none">
+                                                <path
+                                                    d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end search bar -->
+
+
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900  rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#">Catálogo</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-1 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#">Información</a>
+
+                    <a type="button"
+                        class="inline-block py-2 px-3 md:mt-0 md:ml-1 hover:bg-gray-200 rounded-full relative hover:shadow-lg">
+                        <div class="flex items-center h-5">
+                            <i class="fa  fa-user"></i>
+                        </div>
+                    </a>
+                    <a type="button"
+                        class="inline-block py-2 px-3 md:mt-0 md:ml-1 hover:bg-gray-200 rounded-full relative hover:shadow-lg">
+                        <div class="flex items-center h-5">
+                            <i class="fa  fa-shopping-cart"></i>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="my-10 ">
+            <div class="sliderAx  h-auto ">
+                <div id="slider-1" class=" ">
+                    <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill"
+                        style="background-image: url(https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80)">
+                        <div class="md:w-1/2">
+                            <p class="font-bold text-sm uppercase">Services</p>
+                            <p class="text-3xl font-bold">Hello world</p>
+                            <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+                            <a href="#"
+                                class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact
+                                us</a>
+                        </div>
+                    </div> <!-- container -->
+                    <br>
+                </div>
+
+                <div id="slider-2" class="">
+                    <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill"
+                        style="background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)">
+
+                        <p class="font-bold text-sm uppercase">Services</p>
+                        <p class="text-3xl font-bold">Hello world</p>
+                        <p class="text-2xl mb-10 leading-none">Carousel with TailwindCSS and jQuery</p>
+                        <a href="#"
+                            class="bg-purple-800 py-4 px-8 text-white font-bold uppercase text-xs rounded hover:bg-gray-200 hover:text-gray-800">Contact
+                            us</a>
+
+                    </div> <!-- container -->
+                    <br>
+                </div>
+            </div>
+            <div class="flex justify-between w-12 mx-auto pb-2">
+                <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 "></button>
+                <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+            </div>
+        </div>
+
+        <div>
+            <div class="container mx-auto">
+                <p class="font-sans font-bold text-2xl text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, sequi ut iusto dele
+                    dolor, nisi </p>
+            </div>
+        </div>
+
+        <div>
+            <div class="container mx-auto py-10">
+                <div class="bg-gray-300" style="height: 1px;">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container mx-auto">
+                <div class="  py-5 grid grid-flow-col">
+                    <div class="inline-block md\:grid-cols-1 gap-4 px-5 sm\:grid-cols-12">
+                        <div
+                            class=" px-8 py-8 bg-gray-900 text-white  overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                            <img src="https://i.pinimg.com/originals/7a/ec/a5/7aeca525afa2209807c15da821b2f2c6.png"
+                                class="logo-area h-4">
+                            <h3 class="py-2 text-4xl font-bold font-mono">$15</h3>
+                            <p class="text-xs">Last month's total charge : $15.28<br>Lastly used by : $20 - Premium
+                                Family</p>
+                            <div class="text-center mt-2 leading-none flex justify-between w-full">
+                                <span class=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
+                                    Spotify
+                                </span>
+                                <span class=" inline-flex items-center leading-none text-sm">
+                                    View number
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block md\:grid-cols-1 px-5 sm\:grid-cols-12">
+                        <div
+                            class=" px-8 py-8 bg-gray-900 text-white  overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                            <img src="https://i.pinimg.com/originals/7a/ec/a5/7aeca525afa2209807c15da821b2f2c6.png" class="logo-area h-4">
+                            <h3 class="py-2 text-4xl font-bold font-mono">$15</h3>
+                            <p class="text-xs">Last month's total charge : $15.28<br>Lastly used by : $20 - Premium
+                                Family</p>
+                            <div class="text-center mt-2 leading-none flex justify-between w-full">
+                                <span class=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
+                                    Spotify
+                                </span>
+                                <span class=" inline-flex items-center leading-none text-sm">
+                                    View number
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-block md\:grid-cols-1 px-5 sm\:grid-cols-12">
+                        <div
+                            class=" px-8 py-8 bg-gray-900 text-white  overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                            <img src="https://i.pinimg.com/originals/7a/ec/a5/7aeca525afa2209807c15da821b2f2c6.png" class="logo-area h-4">
+                            <h3 class="py-2 text-4xl font-bold font-mono">$15</h3>
+                            <p class="text-xs">Last month's total charge : $15.28<br>Lastly used by : $20 - Premium
+                                Family</p>
+                            <div class="text-center mt-2 leading-none flex justify-between w-full">
+                                <span class=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
+                                    Spotify
+                                </span>
+                                <span class=" inline-flex items-center leading-none text-sm">
+                                    View number
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    <script src="../public/js/carousel-hero.js" async></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+</html>

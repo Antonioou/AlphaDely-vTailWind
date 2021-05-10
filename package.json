@@ -1,0 +1,26 @@
+{
+  "name": "AlphaDely",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NtnCode/AlphaDely.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NtnCode/AlphaDely/issues"
+  },
+  "homepage": "https://github.com/NtnCode/AlphaDely#readme",
+  "dependencies": {
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5"
+  }
+}
